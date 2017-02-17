@@ -1,0 +1,43 @@
+html,body {
+	height: 100%;
+}
+
+body {
+	background:url(../images/bg.jpg) no-repeat;
+	background-size: cover;
+}
+
+/*表单部分*/
+.form-signin {
+	max-width: 330px;
+	height: 279px;
+	margin: auto;
+	padding: 15px;
+	background: rgba(63, 76, 82, 0.38);
+    margin-top: 100px;
+}
+
+/*标题部分*/
+h2 {
+	color: #fff;
+}
+
+/*邮件输入框*/
+.form-control {
+	margin-bottom: 10px;
+}
+
+
+/*选择框*/
+label {
+	color: #fff;
+}
+
+.btn-block {
+	background:#d2d401;
+	border:none;
+}
+.btn-block:hover {
+	background: #a7a901;
+	transition:background .3s ease-in;
+}

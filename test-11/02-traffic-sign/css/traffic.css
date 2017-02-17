@@ -1,0 +1,189 @@
+@charset "utf-8";
+/*定义flex伸缩盒*/
+/*设置伸缩盒的子元素向两端对齐*/
+/*设置子元素的排列方向是竖直方向*/
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+img {
+  border: none;
+}
+input,
+select,
+textarea {
+  outline: none;
+  border: none;
+  background: none;
+}
+textarea {
+  resize: none;
+}
+a {
+  text-decoration: none;
+}
+div,
+h3 {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.red {
+  color: red !important;
+}
+.blue1 {
+  color: #b5d651;
+}
+.container {
+  width: 800px;
+  height: 360px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -400px;
+  margin-top: -180px;
+  font-family: "黑体";
+}
+.container .title {
+  width: 100%;
+  height: 180px;
+  line-height: 180px;
+  text-align: center;
+  font-size: 100px;
+  border: 1px solid #3e8850;
+}
+.container .content {
+  border-top: 10px solid #3e8850;
+  *zoom: 1;
+}
+.container .content:before,
+.container .content:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.container .content:after {
+  clear: both;
+}
+.container .bus {
+  width: 25%;
+  height: 180px;
+  background-color: #3b6544;
+  float: left;
+  padding: 15px;
+}
+.container .bus p:first-child {
+  *zoom: 1;
+}
+.container .bus p:first-child:before,
+.container .bus p:first-child:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.container .bus p:first-child:after {
+  clear: both;
+}
+.container .bus .bus-name {
+  display: block;
+  float: left;
+  font-weight: bold;
+  width: 30%;
+  height: auto;
+  font-size: 20px;
+}
+.container .bus .num {
+  color: #fff;
+  float: right;
+  font-size: 50px;
+  font-weight: bold;
+}
+.container .bus .next {
+  font-size: 25px;
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.container .bus .txt {
+  *zoom: 1;
+}
+.container .bus .txt:before,
+.container .bus .txt:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.container .bus .txt:after {
+  clear: both;
+}
+.container .bus li {
+  float: left;
+  color: #b7d54f;
+  font-size: 10px;
+  width: 85px;
+}
+.container .bus .dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #b7d54f;
+}
+.container .bus .to {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.container .station {
+  width: 75%;
+  height: 180px;
+  background-color: #b7d54f;
+  float: right;
+}
+.container .station ul {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *zoom: 1;
+}
+.container .station ul:before,
+.container .station ul:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.container .station ul:after {
+  clear: both;
+}
+.container .station ul li {
+  /*固定宽度使文字强制换行竖直排列*/
+  width: 12px;
+  text-align: center;
+  height: 180px;
+  color: #3d6255;
+  font-weight: bold;
+  /*定义li的flex伸缩盒*/
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+}

@@ -1,0 +1,149 @@
+*  {
+	margin: 0;
+	padding: 0;
+}
+/*开启3D只能正对子元素：
+	-webkit-transform-style:preserve-3d;
+	-webkit-prespective-origin:25% 75%;
+	-webkit-prespective:300;  透视距离*/
+body {
+	background-color: #282726;
+}
+.outer-container {
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	width:300px;
+	height:300px;
+	margin:auto;
+	-webkit-transform-style:preserve-3d;
+	-webkit-perspective-origin:50% 50%;
+	-moz-transform-style:preserve-3d;
+	-moz-perspective-origin:50% 50%;
+	-o-transform-style:preserve-3d;
+	-o-perspective-origin:50% 50%; /*50% 50%是相对于width和height的，如果不设置width和height则transform-origin不起作用*/  
+	transform-style:preserve-3d;
+	perspective-origin: 50% 50%;
+	backface-visibility: hidden;  
+    -webkit-animation: animations 4s ease-in-out 0.1s infinite;  
+    -moz-animation: animations 4s ease-in-out 0.1s infinite;  
+    -o-animation: animations 4s ease-in-out 0.1s infinite;  
+    animation: animations 4s ease-in-out 0.1s infinite;
+}
+
+/*让魔方动起来*/
+@-webkit-keyframes animations {  
+    0%{-webkit-transform:rotateZ(270deg); }  
+    25%{-webkit-transform:rotateY(180deg); }  
+    50%{-webkit-transform:rotateZ(-270deg);}  
+    75%{-webkit-transform:rotateY(-180deg);}  
+}  
+@-moz-keyframes animations {  
+    0%{-moz-transform:rotateZ(270deg); }  
+    25%{-moz-transform:rotateY(180deg); }  
+    50%{-moz-transform:rotateZ(-270deg);}  
+    75%{-moz-transform:rotateY(-180deg);}  
+}  
+@-o-keyframes animations {  
+    0%{-o-transform:rotateZ(270deg); }  
+    25%{-o-transform:rotateY(180deg); }  
+    50%{-o-transform:rotateZ(-270deg);}  
+    75%{-o-transform:rotateY(-180deg);}  
+}  
+@keyframes animations {  
+    0%{transform:rotateZ(270deg); }  
+    25%{transform:rotateY(180deg); }  
+    50%{transform:rotateZ(-270deg);}  
+    75%{transform:rotateY(-180deg);}  
+}  
+
+.container {
+	-webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.container>div {
+	position: absolute;  
+    top: 0;  
+    width: 297px;  
+    height: 297px;  
+}
+
+.one {
+	transform: translateZ(150px);
+	-webkit-transform: translateZ(150px);
+}
+.one .min-cube {
+	background-color: #00c;
+}
+
+
+
+.two {
+	transform: rotateX(90deg) translateZ(150px);
+	-webkit-transform: rotateX(90deg) translateZ(150px);
+}
+.two .min-cube {
+	background-color: #fff;
+}
+
+
+
+.three {
+	transform: rotateX(90deg) translateZ(-150px);
+	-webkit-transform: rotateX(90deg) translateZ(-150px);
+}
+.three .min-cube {
+	background-color: #ffff00;
+}
+
+
+
+
+
+.four {
+	transform: rotateY(90deg) translateZ(-150px);
+	-webkit-transform: rotateY(90deg) translateZ(-150px);  
+    -moz-transform: rotateY(90deg) translateZ(-150px);  
+    -ms-transform: rotateY(90deg) translateZ(-150px);  
+    -o-transform: rotateY(90deg) translateZ(-150px);
+}
+.four .min-cube {
+	background-color: #ffa500;
+}
+
+
+
+
+.five {
+	transform: rotateY(90deg) translateZ(150px);
+	-webkit-transform: rotateY(90deg) translateZ(150px);
+}
+.five .min-cube {
+	background-color: #ff0000;
+}
+
+
+
+
+.six {
+	transform: translateZ(-150px);
+	-webkit-transform: translateZ(-150px);
+}
+.six .min-cube {
+	background-color: #008000;
+}
+
+
+
+
+.min-cube {  
+    width: 97px;  
+    height: 97px; 
+    float: left;  
+    border: 1px solid #888888; /*中间的边框总宽度为2px*/ 
+    border-radius: 10px;
+} 

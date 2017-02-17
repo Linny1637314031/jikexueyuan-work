@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js简易计算器</title>
+	<link rel="stylesheet" href="css/calculator.css">
+	<script type="text/javascript" src="js/calculator.js"></script>
+</head>
+<body>
+	<div class="container">
+		<table cellspacing="0">
+			<tr>
+			    <td colspan="2">计算器</td>
+			</tr>
+			<tr>
+			    <td width="62">数字一</td>
+			    <td width="122">
+			    	<input type="text" id="num1" name="num1">
+			    </td>
+			</tr>
+			<tr>
+			    <td>数字二</td>
+			    <td>
+			    	<input type="text" id="num2" name="num2">
+			    </td>
+			</tr>
+			<tr>
+			    <td>结果</td>
+			    <td>
+			    	<input type="text" id="result" name="result">
+			    </td>
+			</tr>
+			<tr>
+			    <td colspan="2">
+			    	<!-- 方法一： -->
+			    	<!-- <button id="jia" name="jia" onclick="jia()">+</button>
+			    	<button id="jian" name="jian" onclick="jian()">-</button>
+			    	<button id="cheng" name="cheng" onclick="cheng()">x</button>
+			    	<button id="chu" name="chu" onclick="chu()">/</button> -->
+			    	<!-- 方法二： -->
+			    	<button id="jia" name="jia" onclick="cal('+')">+</button>
+			    	<button id="jian" name="jian" onclick="cal('-')">-</button>
+			    	<button id="cheng" name="cheng" onclick="cal('*')">x</button>
+			    	<button id="chu" name="chu" onclick="cal('/')">/</button>
+			    </td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

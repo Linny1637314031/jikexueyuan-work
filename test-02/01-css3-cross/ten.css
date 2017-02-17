@@ -1,0 +1,97 @@
+.content {  /*水平垂直居中的方法*/
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	width:300px;
+	height:300px;
+	margin:auto;
+}
+/*第一个方块*/
+.blue {
+	width: 100px;
+	height: 100px;
+	margin: auto;
+	background-color: #306a93;
+	box-shadow: 0px 0px 15px #414141;
+}
+
+
+/*第二行方块*/
+
+
+.violet {
+	width: 100px;
+	height: 100px;
+	float: left;
+	background-color: #522470;
+	box-shadow: 0px 0px 15px #414141;
+}
+
+/*中间的图片方框*/
+.middle {
+	float: left;
+	width: 100px;
+	height: 100px;
+	box-shadow: 0px 0px 15px #414141;
+	background: -webkit-linear-gradient(#ffffff, #808080);
+	text-align: center;
+}
+.middle img {
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	width:64px;
+	height:64px;
+	margin:auto;
+}
+.green {
+	float: left;
+	width: 100px;
+	height: 100px;
+	background-color: #329d36;
+	box-shadow: 0px 0px 15px #414141;
+}
+
+.red {
+	width: 100px;
+	height: 100px;
+	margin: auto;
+	overflow: hidden;
+	background-color: #8c1b2c;
+	box-shadow: 0px 0px 15px #414141;
+}
+
+/*从上到下的渐变效果，默认是从上到下的渐变*/
+/* Safari 5.1 - 6.0 */
+/*#grad {
+	width: 400px;
+	height: 400px;
+	background: -webkit-linear-gradient(red, blue);
+}*/
+
+
+/*标准语法*/
+/*#grad {
+	width: 400px;
+	height: 400px;
+	background: linear-gradient(#bd1cd5, blue);
+} */ 
+
+/*从左到右渐变*/
+/*#grad {
+	width: 400px;
+	height: 400px;
+	background: linear-gradient(to right, red , blue);
+} 
+*/
+
+/*从左上角到右下角的线性渐变：*/
+/*#grad {
+	width: 400px;
+	height: 400px;
+	background: linear-gradient(to bottom right, red , blue);
+} */

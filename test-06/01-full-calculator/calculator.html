@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>标准计算器</title>
+	<link rel="stylesheet" type="text/css" href="calculator.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h4>标准计算器</h4>
+			<span id="time"></span>
+		</header>
+		<section>
+			<form name="calculator" action="" method="get">
+				<!-- 配置显示窗口，使用onfocus="this.blur();"避免键盘输入 -->
+				<input type="text" name="numScreen" class="screen" value="0" onFocus="this.blur();">
+				<table class="content" width="200" border="0" cellspacing="0">
+					<tr>
+					    <td height="98">
+						    <table class="num" width="200" border="0" cellspacing="8">
+							    <tr>
+							        <td onClick="command(7)" width="50" height="50" align="center" valign="middle" bgcolor="#666666">7</td>
+							        <td onClick="command(8)" width="50" height="50" align="center" valign="middle" bgcolor="#666666">8</td>
+							        <td onClick="command(9)" width="50" height="50" align="center" valign="middle" bgcolor="#666666">9</td>
+							    </tr>
+							    <tr>
+							        <td onClick="command(4)" width="50" height="50" align="center" valign="middle" bgcolor="#666666">4</td>
+							        <td onClick="command(5)" align="center" valign="middle" bgcolor="#666666">5</td>
+							        <td onClick="command(6)" align="center" valign="middle" bgcolor="#666666">6</td>
+							    </tr>
+							    <tr>
+							        <td onClick="command(1)" width="50" height="50" align="center" valign="middle" bgcolor="#666666">1</td>
+							        <td onClick="command(2)" align="center" valign="middle" bgcolor="#666666">2</td>
+							        <td onClick="command(3)" align="center" valign="middle" bgcolor="#666666">3</td>
+							    </tr>
+							    <tr>
+							        <td onClick="command(0)" align="center" valign="middle" bgcolor="#666666">0</td>
+							        <td onClick="dzero()" align="center" valign="middle" bgcolor="#666666">00</td>
+							        <td onClick="dot()" width="50" height="50" align="center" valign="middle" bgcolor="#666666">.</td>
+							    </tr>
+						    </table>
+					    </td>
+					    <td>
+						    <table class="sign" width="200" border="0" cellspacing="8">
+							    <tr>
+							        <td onClick="del()" width="53" height="50" align="center" valign="middle" bgcolor="#333333">
+							        	&larr;
+							        </td>
+							        <td onClick="clearScreen()" width="50" align="center" valign="middle" bgcolor="#333333">c</td>
+							        <td onClick="sin()" width="59" height="50" align="center" valign="middle" bgcolor="#333333">sin</td>
+							    </tr>
+							    <tr>
+							        <td width="53" height="50" align="center" valign="middle" bgcolor="#333333" onClick="times()">&times;</td>
+							        <td width="50" height="50" align="center" valign="middle" bgcolor="#333333" onClick="divide()">&divide;</td>
+							        <td onClick="cos()" align="center" valign="middle" bgcolor="#333333">cos</td>
+							    </tr>
+							    <tr>
+							        <td height="50" colspan="2" align="center" valign="middle" bgcolor="#333333" onClick="minus()"><strong>-</strong></td>
+							        <td onClick="persent()" align="center" valign="middle" bgcolor="#333333">%</td>
+							    </tr>
+							    <tr>
+							        <td height="50" colspan="2" align="center" valign="middle" bgcolor="#333333" onClick="plus()"><strong>+</strong></td>
+							        <td onClick="equal()" align="center" valign="middle" bgcolor="#333333">=</td>
+							    </tr>
+						    </table>
+					    </td>
+					</tr>
+				</table>
+			</form>
+		</section>
+		<footer>
+			<span id="note"></span>
+			<p>欢迎使用JavaScript计算器！</p>
+		</footer>
+	</div>
+	<script type="text/javascript" src="calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+@charset "utf-8";
+//less库
+@import "less/z";
+@import "less/css3";
+
+//公共变量
+@main_d:800px;
+@con_h:180px;
+@fs:30px;
+@color:#3e8850;
+
+.bgc(@c){
+	background-color: @c;
+}
+.fs(@fs){
+	font-size: @fs;
+}
+.ff(){
+	font-family: "黑体";
+}
+.border(@w,@c){
+	border:@w solid @c;
+}
+.border(top,@w,@c){
+	border-top:@w solid @c;
+}
+.border(bottom,@w,@c){
+	border-bottom:@w solid @c;
+}
+.border(left,@w,@c){
+	border-left:@w solid @c;
+}
+.border(right,@w,@c){
+	border-right:@w solid @c;
+}
+
+//画圆
+.cir(@d){
+	.wh(@d);
+	.border-radius(50%);
+}
+
+/*定义flex伸缩盒*/
+.display-flex(){
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+ 	display: flex;
+}
+ 
+
+/*设置伸缩盒的子元素向两端对齐*/
+.space-between(@b:space-between){
+	justify-content: @b;
+ 	-webkit-justify-content: @b;
+ 	-moz-justify-content: @b;
+}
+
+/*设置子元素的排列方向是竖直方向*/
+.flex-column(){
+	flex-direction: column;
+ 	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+}
+ 
+
+ 
+//重置部分
+.reset();
+
+div,h3{
+	.box-sizing(border-box);
+}
+.red{
+	color: red !important;
+}
+.blue1{
+	color: #b5d651;
+}
+.container{
+	.pos-box-cc(@main_d,360px);
+	// .bgc(#ccc);
+	.ff;
+
+	.title{
+		.w100;
+		.l-h(@con_h);
+		.tc;
+		.fs(@fs + 70);
+		.border(1px,@color);
+	}
+	.content{
+		.border(top,10px,@color);
+		.clearfix();
+	}
+	.bus{
+		width: 25%;
+		height: @con_h;
+		.bgc(#3b6544);
+		.fl;
+		padding:15px;
+
+		p:first-child{
+			.clearfix();
+		}
+
+		.bus-name{
+			.d-b;
+			.fl;
+			.font-wb;
+			width: 30%;
+			height: auto;
+			.fs(@fs - 10);
+		}
+		.num{
+			color: #fff;
+			.fr;
+			.fs(@fs + 20);
+			.font-wb;
+		}
+		.next{
+			.fs(@fs - 5);
+			.font-wb;
+			.txt-ver(40px);
+			.tc;
+		}
+		.txt{
+			.clearfix;
+		}
+		li{
+			.fl;
+			color: #b7d54f;
+			.fs(@fs - 20);
+			width: 85px;
+		}
+		.dot{
+			.d-ib;
+			.cir(8px);
+			.bgc(#b7d54f);
+		}
+		.to{
+			.fs(@fs - 15);
+			.font-wb;
+			margin-top: 10px;
+		}
+	}
+	.station{
+		width: 75%;
+		height: @con_h;
+		.bgc(#b7d54f);
+		.fr;
+		// padding:10px;
+
+		ul{
+			display: -webkit-flex;
+			display: flex;
+			.display-flex();
+			.space-between();
+			.box-sizing(border-box);
+			.clearfix();
+
+			li{
+				/*固定宽度使文字强制换行竖直排列*/
+				width: 12px;
+				.tc;
+				height: 180px;
+				color: #3d6255;
+				.font-wb;
+				/*定义li的flex伸缩盒*/
+				.display-flex();
+				.space-between();
+				.flex-column();
+			}
+		}
+	}
+}

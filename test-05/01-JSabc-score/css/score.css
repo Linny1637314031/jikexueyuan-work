@@ -1,0 +1,23 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+.container {
+	margin:auto;
+	margin-top:100px;
+	width:400px;
+	text-align: center;
+}
+
+
+
+
+p.score {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+button {
+	margin:auto;
+	margin-top: 20px;
+}

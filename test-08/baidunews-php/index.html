@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- 手机端适配 -->
+	<meta name="viewport" content="width=device-width,intial-scale=1,maximum-scale=1,user-scale=0">
+	<title>百度新闻</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="font/iconfont.css">
+	<link rel="stylesheet" href="css/news.css">
+</head>
+<body>
+	<div class="container">
+		<header class="cf">
+			<a href="#" class="logo">
+				<span class="iconfont">&#xe7df;</span>
+			</a>
+			<a href="#" class="user">
+				<span class="iconfont">&#xe625;</span>
+			</a>
+			<a href="#" class="more">
+				<span class="iconfont">&#xe637;</span>
+			</a>
+			<a href="#" class="search">
+				<span class="iconfont">&#xf002d;</span>
+			</a>
+		</header>
+		<nav>
+			<ul>
+				<li>
+					<a href="#">精选</a>
+					<i></i>
+				</li>
+				<li>
+					<a href="#">百家</a>
+					<i></i>
+				</li>
+				<li>
+					<a href="#">本地</a>
+					<i></i>
+				</li>
+				<li>
+					<a href="#">娱乐</a>
+					<i></i>
+				</li>
+				<li>
+					<a href="#">社会</a>
+					<i></i>
+				</li>
+				<li>
+					<a href="#">军事</a>
+					<i></i>
+				</li>
+				<li>
+					<a href="#">女人</a>
+					<i></i>
+				</li>
+				<li>
+					<a href="#">搞笑</a>
+					<i></i>
+				</li>
+				<li>
+					<a href="#">互联网</a>
+					<i></i>
+				</li>
+				<li>
+					<a href="#">科技</a>
+					<i></i>
+				</li>
+				<li>
+					<a href="#">更多</a>
+					<i></i>
+				</li>
+			</ul>
+		</nav>
+		<article class="news-main">
+			<ul class="news-lists">
+				<li class="news-list">
+					<div class="newsimg">
+						<img src="img/timg.jpg" width="100%">
+					</div>
+					<div class="newscontent">
+						<h1>八成平台交易额下滑 千家P2P集体谋转型</h1>
+						<p>
+							<span class="newstime">9小时前</span>
+							<span class="newssrc">搜狐</span>
+						</p>
+					</div>
+				</li>
+				<li class="news-list">
+					<div class="newsimg">
+						<img src="img/timg.jpg" width="100%">
+					</div>
+					<div class="newscontent">
+						<h1>八成平台交易额下滑 千家P2P集体谋转型</h1>
+						<p>
+							<span class="newstime">9小时前</span>
+							<span class="newssrc">搜狐</span>
+						</p>
+					</div>
+				</li>
+				<li class="news-list">
+					<div class="newsimg">
+						<img src="img/timg.jpg" width="100%">
+					</div>
+					<div class="newscontent">
+						<h1>八成平台交易额下滑 千家P2P集体谋转型</h1>
+						<p>
+							<span class="newstime">9小时前</span>
+							<span class="newssrc">搜狐</span>
+						</p>
+					</div>
+				</li>
+			</ul>
+		</article>
+	</div>
+	<script src="js/jquery1.9.1.js"></script>
+	<script>
+		//计算nav li 的宽度
+		$(document).ready(function(){
+			var deviceWidth = $("body").width();
+			// console.log(deviceWidth);
+			$('nav li').each(function(index,item){
+				// split() 方法用于把一个字符串分割成字符串数组。 这里是计算li里面的字数
+				if($(this).find('a').html().split('').length > 2){
+					$(this).width(deviceWidth/3);
+				}else{
+					$(this).width(deviceWidth/6);
+				}
+			});
+		});
+	</script>
+</body>
+</html>

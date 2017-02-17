@@ -1,0 +1,109 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+/*标准盒模型*/
+/*用于PC端比较多*/
+.box {
+	width: 100px;
+	height: 100px;
+	/*border:10px solid #5f5f5f;*/
+	background-color: #ccc;
+}
+.box_01 {
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+	margin: 100px;
+	background-color: #9c9fc3;
+	border:5px solid #363d6d;    /*dashed虚线*/
+	/*overflow: scroll;   滚动*/
+	overflow: hidden;  /*隐藏*/
+	box-shadow: 2px 2px 30px 10px #14365a;
+}
+
+
+/*怪异的盒模型*/
+
+/*怪异盒模型手机端上用得比较多，这是由于手机空间有限导致要把外宽高限定好*/
+.boss {
+	width: 100px;
+	height: 100px;
+	/*border:10px solid #5f5f5f;*/
+	background-color: #ccc;
+	position: absolute;
+}
+.boss_01 {
+	width: 120px;
+	height: 120px;
+	padding: 10px;
+	margin: 50px;
+	margin-left: 100px;
+	background-color: #9c9fc3;
+	border:5px solid #363d6d;    /*dashed虚线*/
+	box-sizing: border-box;   /*限定了盒子的宽高，使之不会被内容以及内边距撑大，也就是说不管盒子里面有多少东西，盒子都不会变大*/
+}
+
+
+/*弹性盒模型*/
+.fleft {
+	float: left;
+	width: 400px;
+	background-color: #ccc;
+}
+
+.fright {
+	float: right;
+	width: 400px;
+	background-color: #00c;
+}
+
+
+/*多栏布局（column-count）*/
+.col {
+	column-count:3;
+	column-gap:20px;
+	column-rule-width:3px;
+	column-rule-style:dotted;
+}
+
+/*垂直水平居中*/
+.center {
+	width: 400px;
+	height: 400px;
+	background-color: #ccc;
+	display: -webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+
+}
+
+
+/*真正的弹性盒模型终于出场了*/
+.flex {
+	display:-webkit-flex;
+	width: 600px;
+	background-color: green;
+}
+.first {
+	height: 100px;
+	-webkit-flex:1;
+	-webkit-order:2;
+	background-color: orange;
+}
+.second {
+	height: 100px;
+	-webkit-flex:1;
+	-webkit-order:3;
+	background-color: aquamarine;
+}
+.three {
+	height: 200px;
+	-webkit-flex:1;
+	-webkit-order:1;
+	background-color: darkslategrey;
+}
+
+

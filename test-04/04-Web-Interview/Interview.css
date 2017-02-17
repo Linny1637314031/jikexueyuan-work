@@ -1,0 +1,27 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.content {
+	margin: 10px;
+}
+h2 {
+	text-align: center;
+    line-height: 104px;
+    font-size: 40px;
+    color: #0561ab;
+    font-family: "黑体";
+}
+h3 {
+	line-height: 60px;
+    margin-left: 80px;
+    color: #0d8aec;
+    font-size: 25px;
+    margin-top: 40px;
+}
+.text {
+	margin: auto 40px;
+    line-height: 30px;
+    font-size: 20px;
+}
