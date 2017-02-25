@@ -1,4 +1,4 @@
-##模仿开发基础百度首页[【预览网址】](http://htmlpreview.github.io/?https://github.com/Linny1637314031/jikexueyuan-work/blob/master/test-01/02-baidu(html%2Bcss)/baidu.html)
+##模仿开发基础百度首页[【预览页面】](http://htmlpreview.github.io/?https://github.com/Linny1637314031/jikexueyuan-work/blob/master/test-01/02-baidu(html%2Bcss)/baidu.html)
 相关技术：
 
 >* 初步体验html标签+css布局；
