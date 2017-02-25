@@ -9,3 +9,5 @@
 
 >4、提前学习，使用了css进行美化。
 
+![课表](https://github.com/Linny1637314031/jikexueyuan-work/blob/master/test-01/01-timetable/file.jpg)
+
