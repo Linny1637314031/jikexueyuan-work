@@ -1,4 +1,4 @@
-###让百度首页样式完全与官网样式完全一致[【预览网页】](http://htmlpreview.github.io/?https://github.com/Linny1637314031/jikexueyuan-work/tree/master/test-02/03-baidu(%2Bhover))
+###让百度首页样式完全与官网样式完全一致[【预览网页】](http://htmlpreview.github.io/?https://github.com/Linny1637314031/jikexueyuan-work/blob/master/test-02/03-baidu(%2Bhover)/baidu.html)
 
 ========
 
